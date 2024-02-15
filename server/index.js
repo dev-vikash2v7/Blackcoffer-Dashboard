@@ -17,10 +17,12 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({limit:'1mb'}));
 
+console.log(process.env.MONGODB_URL)
 
+try{
 
 mongoose
-  .connect(process.env.MONGODB_URL, {
+  .connect("mongodb+srv://vikashverma:vikash..123@cluster0.4ozgtam.mongodb.net/dashboard", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -32,7 +34,11 @@ mongoose
   .catch((error) => {
     console.log("MongoDB connection failed", error);
   });
-
+}
+catch(err){
+  console.log('Error '  ,err.message)
+  alert(err.message)
+}
 
 
   app.get('/' , (req,res)=>{
