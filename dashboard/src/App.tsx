@@ -15,7 +15,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/');
+      const response = await axios.get('https://blackcoffer-dashboard-backend.vercel.app/get-data');
       setDashboardData(response.data.result);
     } catch (error) {
       console.error('Error fetching data:', error);
