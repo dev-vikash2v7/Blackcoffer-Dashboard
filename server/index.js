@@ -35,6 +35,9 @@ mongoose
 
 
 
+  app.get('/' , (req,res)=>{
+    res.send('hello from blackcoffer dashboard backend')
+  } );
   
-  app.get('/' , getAllData );
+  app.get('/get-data' , getAllData );
   app.post('/insert-many' , insertAllData );
