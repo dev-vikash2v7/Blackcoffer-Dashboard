@@ -1,0 +1,9 @@
+
+server/node_modules
+dashboard/.git
+server/.git
+dashboard/.vscode/*
+server/.vscode/*
+
+dashboard/node_modules 
+dashboard/node_modules/
